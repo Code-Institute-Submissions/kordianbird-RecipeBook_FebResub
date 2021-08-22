@@ -61,6 +61,8 @@ These are steps you can use to fork the repository:
 
 ## Code
 
+* I found the registration form [here](https://codepen.io/vaskopetrov/pen/amxvrY?editors=1100)
+
 ## Content
 
 ## Media
