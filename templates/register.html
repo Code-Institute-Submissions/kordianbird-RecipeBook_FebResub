@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <form class="col s12" id="reg-form">
+        <form class="col s12" id="reg-form" method="POST" action="{{ url_for('register') }}">
             <div class="row">
                 <!-- first name -->
                 <div class="input-field col s12 m8 offset-m2">
