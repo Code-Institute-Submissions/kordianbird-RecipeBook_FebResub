@@ -18,10 +18,10 @@
             <!-- main navbar -->
             <nav class="navbar-fixed">
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">RecipeBook</a>
+                    <a href="{{ url_for('get_recipe') }}" class="brand-logo">RecipeBook</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Home</a></li>
+                        <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
                         <li><a href="badges.html">Recipes</a></li>
                         <li><a href="collapsible.html">Login</a></li>
                         <li><a href="collapsible.html">Logout</a></li>
@@ -31,7 +31,7 @@
             </nav>
             <!-- mobile collapse menu -->
             <ul class="sidenav" draggable="true" id="mobile-demo">
-                <li><a href="sass.html">Home</a></li>
+                <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
                 <li><a href="badges.html">Recipes</a></li>
                 <li><a href="collapsible.html">Login</a></li>
                 <li><a href="collapsible.html">Logout</a></li>

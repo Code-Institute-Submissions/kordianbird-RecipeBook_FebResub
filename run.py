@@ -26,6 +26,11 @@ def get_recipe():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
+
+
 # update to debug=False prior to deployment!
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
