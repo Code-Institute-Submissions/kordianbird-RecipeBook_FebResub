@@ -8,7 +8,17 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <input id="username" name="username" type="text" class="validate" required>
                     <label for="username">Username</label>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div>
+                                    <h6>{{ message }}</h3>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
+                
             </div>
             <!-- email -->
             <div class="row">
