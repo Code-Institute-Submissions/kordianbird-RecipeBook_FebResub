@@ -32,7 +32,7 @@ def register():
         existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already taken")
+            flash("Username already taken", "username_flash")
             return redirect(url_for("register"))
 
         register = {
@@ -43,7 +43,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("You have successfully registered!")
+        flash("You have successfully registered!", "register_flash")
     return render_template("register.html")
 
 

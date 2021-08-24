@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
+    <section class="center-align">
+        {% with register_flash = get_flashed_messages(category_filter=["register_flash"]) %}
+            {% if register_flash %}
+                {%- for message in register_flash %}
+                    <div>
+                        <h3>{{ message }}</h3>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
     <div class="row">
         <form class="col s12" id="reg-form" method="POST" action="{{ url_for('register') }}">
             <div class="row">
@@ -8,9 +19,9 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <input id="username" name="username" type="text" class="validate" required>
                     <label for="username">Username</label>
-                    {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                            {% for message in messages %}
+                    {% with username_flash = get_flashed_messages(category_filter=["username_flash"]) %}
+                        {% if username_flash %}
+                            {%- for message in username_flash %}
                                 <div>
                                     <h6>{{ message }}</h3>
                                 </div>
