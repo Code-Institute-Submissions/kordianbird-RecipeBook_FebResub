@@ -32,3 +32,10 @@
     top: -20px;
     right: -20px;
   }
+
+  body {
+    background-image: url("https://wallpaperaccess.com/full/3086351.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
