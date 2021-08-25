@@ -17,7 +17,7 @@
             <div class="row">
                 <!-- username -->
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="username" name="username" type="text" class="validate" required>
+                    <input id="username" name="username" type="text" minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{6,16}$" class="validate" required>
                     <label for="username">Username</label>
                     {% with username_flash = get_flashed_messages(category_filter=["username_flash"]) %}
                         {% if username_flash %}
@@ -41,7 +41,7 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="password" name="password" type="password" class="validate" minlength="6" required>
+                    <input id="password" name="password" type="password" class="validate" minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{6,16}$" required>
                     <label for="password">Password</label>
                 </div>
             </div>
