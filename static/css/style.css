@@ -39,3 +39,11 @@
     background-repeat: no-repeat;
     background-size: cover;
    }
+
+.card {
+  background-color:transparent
+}
+
+.card .card-image img {
+  width: 305px;
+}
