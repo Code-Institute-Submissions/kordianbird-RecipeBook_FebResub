@@ -1,17 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.is_vegan }}<br>
-        {{ recipe.is_vegetarian }}<br>
-    {% endfor %}
+<div class="container" id="recipe-container">
     <div class="row">
         <!--column-->
         <div class="col l4 m6 s12">
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -22,7 +17,7 @@
             </div>
           </div>
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -38,7 +33,7 @@
         <!--column-->
         <div class="col l4 m6 s12">
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -49,7 +44,7 @@
             </div>
           </div>
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -65,7 +60,7 @@
         <!--column-->
         <div class="col l4 m6 s12">
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -76,7 +71,7 @@
             </div>
           </div>
             <!-- card-->
-          <div class="card">
+          <div class="card large">
             <div class="card-image">
               <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/astwjw4ji5turib9xngm-305x229.jpg">
               <span class="card-title">Card Title</span>
@@ -91,6 +86,6 @@
 
 
       </div>
-    
+</div>  
 
 {% endblock %}

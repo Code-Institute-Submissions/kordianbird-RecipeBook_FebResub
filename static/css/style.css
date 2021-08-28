@@ -41,9 +41,19 @@
    }
 
 .card {
-  background-color:transparent
+  /* background-color:transparent; */
 }
 
 .card .card-image img {
-  width: 305px;
+  /* width: 305px; */
+}
+
+#recipe-container {
+    background: transparent;
+    padding: 20px 25px;
+    border:none;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 10%;
 }
