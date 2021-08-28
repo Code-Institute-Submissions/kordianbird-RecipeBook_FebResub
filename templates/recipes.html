@@ -4,9 +4,9 @@
 <div class="container" id="recipe-container">
   <div class="row">
     <!--column-->
+    {% for recipe in recipes %}
     <div class="col l4 m6 s12">
       <!-- card-->
-      {% for recipe in recipes %}
       <div class="card large">
         <div class="card-image">
           <img width="305" height="229"
@@ -15,12 +15,11 @@
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="fas fa-plus"></i></a>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-            require little markup to use effectively.</p>
+          <p>{{ recipe.recipe_method }}</p>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </div>
 
