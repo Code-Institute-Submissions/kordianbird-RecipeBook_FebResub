@@ -4,28 +4,39 @@
 <div class="container">
     <h3>Add recipe!</h3>
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+        </div>
         <div class="row">
             <div class="input-field col s6">
-                <input id="input_text" type="text" data-length="20">
-                <label for="input_text">Recipe name</label>
+                <input id="input_text recipe_name" name="recipe_name" type="text" data-length="20">
+                <label for="input_text recipe_name">Recipe name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea" data-length="400"></textarea>
-                <label for="textarea2">Write your recipe</label>
+                <textarea id="textarea2 recipe_method" name="recipe_method" class="materialize-textarea" data-length="400"></textarea>
+                <label for="textarea2 recipe_method">Write your recipe</label>
             </div>
         </div>
         <p>
-            <label>
-                <input type="checkbox" />
+            <label for="is_vegetarian">
+                <input type="checkbox" id="is_vegetarian" name="is_vegetarian" >
                 <span>Vegetarian</span>
             </label>
         </p>
         <p>
-            <label>
-                <input type="checkbox" />
+            <label for="is_vegan">
+                <input type="checkbox" id="is_vegan" name="is_vegan" >
                 <span>Vegan</span>
             </label>
         </p>
