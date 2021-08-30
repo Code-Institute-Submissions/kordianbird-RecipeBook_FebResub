@@ -6,7 +6,7 @@
 <div class="row">
     <form class="col s12" method="POST" action="">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s4">
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -17,26 +17,32 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
-                <input id="input_text recipe_name" name="recipe_name" type="text" data-length="20">
-                <label for="input_text recipe_name">Recipe name</label>
+            <div class="input-field col s4">
+                <input id="recipe_name" name="recipe_name" type="text" maxlength="20" required>
+                <label for="recipe_name">Recipe name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="textarea2 recipe_method" name="recipe_method" class="materialize-textarea" data-length="400"></textarea>
-                <label for="textarea2 recipe_method">Write your recipe</label>
+                <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" maxlength="400" required></textarea>
+                <label for="recipe_method">Write your recipe</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" maxlength="50"></textarea>
+                <label for="recipe_method">Provide Image Link</label>
             </div>
         </div>
         <p>
             <label for="is_vegetarian">
-                <input type="checkbox" id="is_vegetarian" name="is_vegetarian" >
+                <input type="checkbox" id="is_vegetarian" name="is_vegetarian" required>
                 <span>Vegetarian</span>
             </label>
         </p>
         <p>
             <label for="is_vegan">
-                <input type="checkbox" id="is_vegan" name="is_vegan" >
+                <input type="checkbox" id="is_vegan" name="is_vegan" required>
                 <span>Vegan</span>
             </label>
         </p>
