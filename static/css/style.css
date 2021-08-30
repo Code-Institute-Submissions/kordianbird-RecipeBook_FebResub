@@ -38,6 +38,7 @@
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
    }
 
 .card {
@@ -56,4 +57,13 @@
     box-sizing: border-box;
     position: relative;
     margin-top: 10%;
+}
+
+.btn-floating.halfway-fab {
+  bottom: 0px;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
 }
