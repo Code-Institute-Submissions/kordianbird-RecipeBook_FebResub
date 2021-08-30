@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Add recipe!</h1>
-
 <div class="container">
+    <h3>Add recipe!</h3>
 <div class="row">
     <form class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input id="input_text" type="text" data-length="10">
-                <label for="input_text">Input text</label>
+                <input id="input_text" type="text" data-length="20">
+                <label for="input_text">Recipe name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-                <label for="textarea2">Textarea</label>
+                <textarea id="textarea2" class="materialize-textarea" data-length="400"></textarea>
+                <label for="textarea2">Write your recipe</label>
             </div>
         </div>
     </form>

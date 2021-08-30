@@ -68,3 +68,14 @@
   position: fixed;
   top: 0;
 }
+
+h3 {
+  text-align: center;
+
+}
+
+@media only screen and (max-width: 570px) {
+  .container {
+    margin-top: 20%;
+  }
+}
