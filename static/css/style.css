@@ -79,3 +79,8 @@ h3 {
     margin-top: 20%;
   }
 }
+
+.user-div {
+  position: absolute;
+  bottom: 1px;
+}
