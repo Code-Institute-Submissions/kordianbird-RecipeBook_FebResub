@@ -88,3 +88,7 @@ h3 {
 .expand {
   height: 1000px !important;
 }
+
+.Hide {
+  display: none;
+}
