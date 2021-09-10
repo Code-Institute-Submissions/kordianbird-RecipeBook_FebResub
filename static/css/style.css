@@ -109,3 +109,8 @@ h3 {
   position: absolute;
   right: 0;
 }
+
+#edit-btn {
+  position: absolute;
+  left: 0;
+}
