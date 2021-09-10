@@ -104,3 +104,8 @@ h3 {
   animation-play-state: running;
   animation-name: showUp;
 }
+
+#del-btn {
+  position: absolute;
+  right: 0;
+}
