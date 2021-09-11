@@ -75,7 +75,7 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
- 
+
     if session["user"]:
         user_recipes = mongo.db.recipes.find({"created_by": session["user"]})
         return render_template("profile.html", recipes=user_recipes, username=username)
@@ -113,10 +113,31 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = mongo.db.tasks.find_one({"_id": ObjectId(recipe_id)})
+    if request.method == "POST":
+        is_vegan = "yes" if request.form.get("is_vegan") else "no"
+        is_vegetarian = "yes" if request.form.get("is_vegetarian") else "no"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_method": request.form.get("recipe_method"),
+            "recipe_img": request.form.get("recipe_img"),
+            "is_vegan": is_vegan,
+            "is_vegetarian": is_vegetarian,
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("recipe updated!")
 
+    recipe = mongo.db.tasks.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("recipe deleted!")
+    return redirect(url_for("get_recipe"))
 
 
 # update to debug=False prior to deployment!
