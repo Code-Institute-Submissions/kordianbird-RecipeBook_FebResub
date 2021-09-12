@@ -27,6 +27,13 @@ def get_recipe():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/get_user_recipe")
+def get_user_recipe():
+    if session["user"]:
+        user_recipes = mongo.db.recipes.find({"created_by": session["user"]})
+        return render_template("user_recipes.html", recipes=user_recipes)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -77,8 +84,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        user_recipes = mongo.db.recipes.find({"created_by": session["user"]})
-        return render_template("profile.html", recipes=user_recipes, username=username)
+        return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
 
