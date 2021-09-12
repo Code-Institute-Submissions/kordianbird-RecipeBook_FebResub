@@ -20,6 +20,16 @@
         <div class="user-div">
           <p class="black-text"><b>Created By: {{ recipe.created_by }}</b></p>
         </div>
+        <div class="col l4 m4 s4 offset-l8 offset-m8 offset-s8 user-div">
+          <p class="no-margin">
+              <i class="fas fa-carrot"></i>
+              <span>{{ recipe.is_vegetarian }}</span>
+          </p>
+          <p class="no-margin">
+              <i class="fas fa-leaf"></i>
+              <span>{{ recipe.is_vegan }}</span>
+          </p>
+        </div>
       </div>
     </div>
     {% endfor %}
