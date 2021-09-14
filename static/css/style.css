@@ -118,3 +118,11 @@ h3 {
 .no-margin {
   margin: 0;
 }
+
+textarea {
+  resize: none;
+}
+
+.text-height {
+  height: 100px;
+}
