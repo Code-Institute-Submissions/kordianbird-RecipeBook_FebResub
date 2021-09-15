@@ -27,7 +27,7 @@ As a User...
 
 * profile page let's the user know that they are logged in and what is their username
 
-* create recipe page is plain and not cramped with content to not overwhelm the user
+* add recipe page is plain and not cramped with content to not overwhelm the user
 
 * your recipes page gives the user options to either edit or delete their recipes
 
@@ -36,6 +36,14 @@ As a User...
 # Features
 
 ## Existing Features
+
+* login/logout allows the user to enter/leave their profile
+
+* the user is able to create their own recipe in add reecipe page
+
+* the user can then edit/delete their previously published recipes
+
+* the home page shows all recipes of all users
 
 ## Next Features
 
