@@ -52,12 +52,47 @@ As a User...
 
 ## Languages
 
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+-I used html (HyperText Markup Language) as the markup language for this project
+
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+-I used css3 to style many aspects of the website
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-I used python to program my database
+
 ## Framework
+
+* [Materialize](https://materializecss.com/)
+-I used materialize as a framework for this project
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+-I used flask to help me build my website
 
 ## Libraries
 
+* [werkzeug.security](https://werkzeug.palletsprojects.com/en/2.0.x/utils/?highlight=security#module-werkzeug.security)
+-I used werkzeug to hash user's passwords
+
+* [bson.objectid](https://docs.mongodb.com/manual/reference/method/ObjectId/)
+-I used objectid to edit/delete recipes from database
+
+* [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+-I used flask-pymongo to connect to my database on MongoDB
+
+* [JQuery](https://en.wikipedia.org/wiki/JQuery)
+-I used jquery to add functionality to some html elements
+
 ## Programmes
 
+* [Git](https://git-scm.com/)
+ I used gitpod's terminal to commit my code and then to push it to GitHub
+
+* [GitHub](https://github.com/)
+ I used GitHub to store my project code
+
+* [Mockplus](https://www.mockplus.com/)
+ I used Mockplus to create my wireframes
 
 # Testing
 
