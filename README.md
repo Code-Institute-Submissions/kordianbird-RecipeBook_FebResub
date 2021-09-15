@@ -47,6 +47,9 @@ As a User...
 
 ## Next Features
 
+* a "like" button to create popularity among recipes
+
+* function to change user's username or password 
 
 # Technologies Used
 
@@ -128,6 +131,8 @@ These are steps you can use to fork the repository:
 * I found the registration form [here](https://codepen.io/vaskopetrov/pen/amxvrY?editors=1100)
 
 ## Content
+
+* All content was written by me personally
 
 ## Media
 
