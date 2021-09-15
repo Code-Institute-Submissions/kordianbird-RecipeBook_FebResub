@@ -49,7 +49,11 @@ As a User...
 
 * a "like" button to create popularity among recipes
 
-* function to change user's username or password 
+* function to change user's username or password
+
+* access to more food categories
+
+* a search bar to find specific recipes by name/user/category
 
 # Technologies Used
 
