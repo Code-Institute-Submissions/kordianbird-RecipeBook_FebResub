@@ -8,6 +8,18 @@ for everyone to use and users are free to share their passion for culinary arts.
 # UX
 
 ## User Stories
+People are always cooking either for themselves or for their family. They are
+always eager to try out something new or improve the recipes they already know.
+
+My webiste aims to help people discover and improve their recipes for tastier meals.
+
+As a User...
+
+* I want to be able to find new recipes
+
+* I want to create recipes for other users to see
+
+* I want to be able to easily navigate through the website
 
 ## Design
 
