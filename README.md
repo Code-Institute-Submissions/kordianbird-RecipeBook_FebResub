@@ -23,6 +23,15 @@ As a User...
 
 ## Design
 
+* the background image gives off a fun and inviting feel to the user
+
+* profile page let's the user know that they are logged in and what is their username
+
+* create recipe page is plain and not cramped with content to not overwhelm the user
+
+* your recipes page gives the user options to either edit or delete their recipes
+
+* the pink and cyan colors of navbar and buttons are bright to give the website a calm and nice feel
 
 # Features
 
