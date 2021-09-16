@@ -186,6 +186,8 @@ These are steps you can use to fork the repository:
 
 * All content was written by me personally
 
+* Some recipes that were used were found on google
+
 ## Media
 
 * I found the background image on [google images](https://www.google.com/search?q=hd+food+wallpapers+27%22&tbm=isch&ved=2ahUKEwj475X9icryAhXMGcAKHfcgCZkQ2-cCegQIABAA&oq=hd+food+wallpapers+27%22&gs_lcp=CgNpbWcQAzoFCAAQgAQ6BAgAEB46BggAEAUQHjoGCAAQCBAeUM2cDVi2pw1g_6sNaABwAHgAgAEziAG1AZIBATSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=LB4lYfipCsyzgAb3waTICQ&bih=1329&biw=2560#imgrc=1qrb-TsJOxwMRM)
