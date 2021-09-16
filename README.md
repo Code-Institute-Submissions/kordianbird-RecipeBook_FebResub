@@ -39,6 +39,8 @@ As a User...
 
 * the pink and cyan colors of navbar and buttons are bright to give the website a calm and nice feel
 
+* recipes show if they are vegan or vegetarian using symbols
+
 # Features
 
 ## Existing Features
@@ -50,6 +52,8 @@ As a User...
 * the user can then edit/delete their previously published recipes
 
 * the home page shows all recipes of all users
+
+* expand button allows the recipe to be expanded to show more content
 
 ## Next Features
 
