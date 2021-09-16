@@ -108,6 +108,44 @@ As a User...
 
 ## Heroku
 
+I deployed my app to Heroku using these steps...
+
+1. Type `pip3 freeze --local > requirements.txt`
+
+2. Type `echo web: python app.py > Procfile`
+
+3. Procfile may create a blank line at the bottom, delete that blank line
+
+4. Log in to Heroku
+
+5. Click on `Create new app`
+
+6. Give the app a name and choose region
+
+7. Click `Create app`
+
+8. Click on `Connect to GitHub` in `Deployment method` section
+
+9. Enter name of your repository and click `search`
+
+10. Once you find the repository click on `Connect`
+
+11. Click on `settings` tab and then click on `Reveal Config Vars`
+
+12. Enter your IP, PORT, SECRET_KEY, MONGO_URI and MONGO_DBNAME
+
+13. Type `git status` in your project terminal to make sure that Procfile and requirements.txt are the only pending changes
+
+14. Add requirements.txt to staging area and commit change
+
+15. Add Procfile to staging area and commit change
+
+16. Type `git push` to push everything to GitHub
+
+17. In "Deploy" section on Heroku click on `Enable Automatic Deploys` at the bottom of the page
+
+18. Then click `Deploy Branch` and wait for your app to deploy
+
 ## Forking the GitHub Repository
 
 Forking the repository makes a copy of the original in your GitHub account to view/make changes without affecting the original.
