@@ -5,8 +5,6 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-if os.path.exists("env.py"):
-    import env
 
 
 app = Flask(__name__)
@@ -37,7 +35,8 @@ def get_user_recipe():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
+        existing_user = mongo.db.users.find_one({
+            "username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already taken", "username_flash")
@@ -66,8 +65,10 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")), "welcome_flash")
-                    return redirect(url_for("profile", username=session["user"]))
+                    flash("Welcome, {}".format(request.form.get(
+                        "username")), "welcome_flash")
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             else:
                 flash("Incorrect Username or Password", "incorrect_flash")
                 return redirect(url_for("login"))
@@ -136,7 +137,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 @app.route("/delete_recipe/<recipe_id>")
