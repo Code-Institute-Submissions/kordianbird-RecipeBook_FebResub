@@ -1,21 +1,16 @@
-.container {
-    background: white;
-    padding: 20px 25px;
-    border: 5px solid #26a69a;
-    height: auto;
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 10%;
-  }
-  .col.s6 > .btn {
-     width: 100%;
-  }
-  radio:required {
-    border-color: red;
-  }
-  .container {
-    animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
-  }
+/* Elements */
+
+body {
+  background-image: url("https://wallpaperaccess.com/full/3086351.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+radio:required {
+  border-color: red;
+}
   
   @keyframes showUp {
     0% {
@@ -25,59 +20,53 @@
       transoform: scale(1);
     }
   }
-  .row {margin-bottom: 10px;}
-  
-  .ngl {
-    position: absolute;
-    top: -20px;
-    right: -20px;
+
+h3 {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 570px) {
+  .container {
+    margin-top: 20%;
   }
-
-  body {
-    background-image: url("https://wallpaperaccess.com/full/3086351.jpg");
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-   }
-
-.card {
-  /* background-color:transparent; */
 }
 
-.card .card-image img {
-  /* width: 305px; */
-}
-
-#recipe-container {
-    background: transparent;
-    padding: 20px 25px;
-    border:none;
-    height: auto;
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 10%;
-}
-
-.btn-floating.halfway-fab {
-  bottom: 0px;
-  right: 0px;
-}
+/* Classes */
 
 .navbar-fixed {
   position: fixed;
   top: 0;
 }
 
-h3 {
-  text-align: center;
-
+.container {
+  background: white;
+  padding: 20px 25px;
+  border: 5px solid #26a69a;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 10%;
+  animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
 }
 
-@media only screen and (max-width: 570px) {
-  .container {
-    margin-top: 20%;
-  }
+.col.s6 > .btn {
+  width: 100%;
+}
+
+.ngl {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.row {
+  margin-bottom: 10px;
 }
 
 .user-div {
@@ -92,6 +81,21 @@ h3 {
 .Hide {
   display: none;
 }
+
+.no-margin {
+  margin: 0;
+}
+
+.text-height {
+  height: 100px;
+}
+
+.btn-floating.halfway-fab {
+  bottom: 0px;
+  right: 0px;
+}
+
+/* IDs */
 
 #transition {
   animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
@@ -115,14 +119,12 @@ h3 {
   left: 0;
 }
 
-.no-margin {
-  margin: 0;
-}
-
-textarea {
-  resize: none;
-}
-
-.text-height {
-  height: 100px;
+#recipe-container {
+  background: transparent;
+  padding: 20px 25px;
+  border:none;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 10%;
 }
