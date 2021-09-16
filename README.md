@@ -21,6 +21,12 @@ As a User...
 
 * I want to be able to easily navigate through the website
 
+* I want to be able to edit my recipe
+
+* I want to be able to delete my recipe
+
+* I want my password to be only available to me 
+
 ## Design
 
 * the background image gives off a fun and inviting feel to the user
@@ -29,7 +35,7 @@ As a User...
 
 * add recipe page is plain and not cramped with content to not overwhelm the user
 
-* your recipes page gives the user options to either edit or delete their recipes
+* user's recipes have delete and edit buttons that are easy to see
 
 * the pink and cyan colors of navbar and buttons are bright to give the website a calm and nice feel
 
@@ -79,7 +85,7 @@ As a User...
 ## Libraries
 
 * [werkzeug.security](https://werkzeug.palletsprojects.com/en/2.0.x/utils/?highlight=security#module-werkzeug.security)
--I used werkzeug to hash user's passwords
+-I used werkzeug to hash user's passwords for privacy
 
 * [bson.objectid](https://docs.mongodb.com/manual/reference/method/ObjectId/)
 -I used objectid to edit/delete recipes from database
