@@ -129,8 +129,7 @@ results:
 
 * JSHint: errors only related to JQuery as JSHint does not support it
 
-[Tests]()
-
+[Tests](https://github.com/kordianbird/RecipeBook/blob/main/static/tests/recipe_tests.PNG)
 
 
 # Deployment
@@ -206,6 +205,8 @@ These are steps you can use to fork the repository:
 * All content was written by me personally
 
 * Some recipes that were used were found on google
+
+* I used FontAwesome to aquire icons
 
 ## Media
 
