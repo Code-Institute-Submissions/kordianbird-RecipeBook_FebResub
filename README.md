@@ -113,6 +113,23 @@ As a User...
 
 # Testing
 
+I used :
+
+* [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my html code
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my css code
+
+* [JSHint](https://jshint.com/) to validate my JavaScript code
+
+results:
+
+* W3C Markup Validator: errors only related to Flask in my html code otherwise no errors in any of my html pages
+
+* W3C CSS Validator: 0 errors
+
+* JSHint: errors only related to JQuery as JSHint does not support it
+
+
 
 # Deployment
 
