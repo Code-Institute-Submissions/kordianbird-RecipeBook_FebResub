@@ -12,14 +12,14 @@ radio:required {
   border-color: red;
 }
   
-  @keyframes showUp {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transoform: scale(1);
-    }
+@keyframes showUp {
+  0% {
+    transform: scale(0);
   }
+  100% {
+    transform: scale(1);
+  }
+}
 
 h3 {
   text-align: center;
