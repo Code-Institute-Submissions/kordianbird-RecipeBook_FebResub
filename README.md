@@ -47,7 +47,7 @@ As a User...
 
 * login/logout allows the user to enter/leave their profile
 
-* the user is able to create their own recipe in add reecipe page
+* the user is able to create their own recipe in add recipe page
 
 * the user can then edit/delete their previously published recipes
 
