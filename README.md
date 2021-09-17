@@ -129,6 +129,8 @@ results:
 
 * JSHint: errors only related to JQuery as JSHint does not support it
 
+* run.python file: errors: `continuation line with same indent as next logical line` and `over-indented`
+
 [Tests](https://github.com/kordianbird/RecipeBook/blob/main/static/tests/recipe_tests.PNG)
 
 
