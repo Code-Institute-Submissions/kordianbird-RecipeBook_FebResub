@@ -4,22 +4,22 @@ $(document).ready(function(){
   $('select').formSelect();
 });
 
-var open = false;
+// var open = false;
 
-jQuery('.btn-floating').click(function() {
-  open = !open;
+// jQuery('.btn-floating').click(function() {
+//   open = !open;
 
-  if(open) {
-    $(".col").removeClass("l8 offset-l2 m8 offset-m2 s8");
-    $(".card").removeClass("expand");
-    $(this).parents(".col").addClass("l8 offset-l2 m8 offset-m2 s8");
-    $(this).parents(".card").addClass("expand");
-    $(".col").not($(this).parents(".col")).addClass("Hide");
-    $(this).children("#icon").text("remove");
-  } else {
-    $(".col").removeClass("l8 offset-l2 m8 offset-m2 s8");
-    $(".card").removeClass("expand");
-    $(".col").removeClass("Hide");
-    $(this).children("#icon").text("add");
-  }
-});
+//   if(open) {
+//     $(".col").removeClass("l8 offset-l2 m8 offset-m2 s8");
+//     $(".card").removeClass("expand");
+//     $(this).parents(".col").addClass("l8 offset-l2 m8 offset-m2 s8");
+//     $(this).parents(".card").addClass("expand");
+//     $(".col").not($(this).parents(".col")).addClass("Hide");
+//     $(this).children("#icon").text("remove");
+//   } else {
+//     $(".col").removeClass("l8 offset-l2 m8 offset-m2 s8");
+//     $(".card").removeClass("expand");
+//     $(".col").removeClass("Hide");
+//     $(this).children("#icon").text("add");
+//   }
+// });

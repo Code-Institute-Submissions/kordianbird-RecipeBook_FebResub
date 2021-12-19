@@ -34,6 +34,10 @@ def get_user_recipe():
         user_recipes = mongo.db.recipes.find({"created_by": session["user"]})
         return render_template("user_recipes.html", recipes=user_recipes)
 
+@app.route("/recipe_info/<recipe_id>")
+def recipe_info(recipe_id):
+    this_recipe = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
+    return render_template("recipe_info.html", recipes=this_recipe)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
