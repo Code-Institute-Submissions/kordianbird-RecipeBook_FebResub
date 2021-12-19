@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="shortcut icon" href="/static/images/food-favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6bf26bfe5.js" crossorigin="anonymous"></script>
     {% block styles %}
     {% endblock %}
@@ -19,10 +20,10 @@
             <!-- main navbar -->
             <nav class="navbar-fixed">
                 <div class="nav-wrapper">
-                    <a href="{{ url_for('get_recipe') }}" class="brand-logo">RecipeBook</a>
+                    <a href="{{ url_for('home') }}" class="brand-logo">RecipeBook</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
                         {% if session.user %}
                             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                             <li><a href="{{ url_for('get_user_recipe') }}">Your Recipes</a></li>
@@ -37,7 +38,7 @@
             </nav>
             <!-- mobile collapse menu -->
             <ul class="sidenav" draggable="true" id="mobile-demo">
-                <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                     <li><a href="{{ url_for('get_user_recipe') }}">Your Recipes</a></li>

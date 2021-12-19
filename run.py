@@ -20,11 +20,12 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# home route
 @app.route("/")
-@app.route("/get_recipe")
-def get_recipe():
+@app.route("/home")
+def home():
     recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("home.html", recipes=recipes)
 
 
 @app.route("/get_user_recipe")
@@ -154,4 +155,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
