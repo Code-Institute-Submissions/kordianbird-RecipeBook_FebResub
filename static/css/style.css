@@ -96,6 +96,12 @@ textarea {
   position: fixed;
 }
 
+.title-div {
+  text-align: center;
+  color: white;
+  background-color: #ee6e73;
+}
+
 /* IDs */
 
 #transition {
