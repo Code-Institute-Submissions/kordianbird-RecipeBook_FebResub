@@ -146,7 +146,7 @@ def edit_recipe(recipe_id):
             "is_vegetarian": is_vegetarian,
             "created_by": session["user"]
         }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        mongo.db.recipes.replace_one({"_id": ObjectId(recipe_id)}, submit)
         flash("recipe updated!")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
