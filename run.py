@@ -34,6 +34,7 @@ def get_user_recipe():
         user_recipes = mongo.db.recipes.find({"created_by": session["user"]})
         return render_template("user_recipes.html", recipes=user_recipes)
 
+
 @app.route("/recipe_info/<recipe_id>")
 def recipe_info(recipe_id):
     this_recipe = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
@@ -56,11 +57,12 @@ def register():
             flash("Username already taken", "username_flash")
             return redirect(url_for("register"))
 
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")),
-            "email": request.form.get("email")
-        }
+            register = {
+                "username": request.form.get("username").lower(),
+                "password": generate_password_hash(
+                    request.form.get("password")),
+                "email": request.form.get("email")
+            }
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
@@ -78,11 +80,11 @@ def login():
         if existing_user:
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get(
-                        "username")), "welcome_flash")
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get(
+                    "username")), "welcome_flash")
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 flash("Incorrect Username or Password", "incorrect_flash")
                 return redirect(url_for("login"))
