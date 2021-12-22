@@ -79,7 +79,7 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get(
                     "username")), "welcome_flash")
@@ -118,11 +118,13 @@ def add_recipe():
     if request.method == "POST":
         is_vegan = "yes" if request.form.get("is_vegan") else "no"
         is_vegetarian = "yes" if request.form.get("is_vegetarian") else "no"
+        recipe_img = request.form.get("recipe_img") if request.form.get(
+            "recipe_img") else "http://veraconsulting.it/wp-content/uploads/2014/04/placeholder4.png"
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_method": request.form.get("recipe_method"),
-            "recipe_img": request.form.get("recipe_img"),
+            "recipe_img": recipe_img,
             "is_vegan": is_vegan,
             "is_vegetarian": is_vegetarian,
             "created_by": session["user"]
