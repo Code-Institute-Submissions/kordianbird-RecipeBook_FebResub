@@ -127,7 +127,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("recipe added!")
-        return redirect(url_for("get_recipe"))
+        return redirect(url_for("home"))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
@@ -157,9 +157,9 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("recipe deleted!")
-    return redirect(url_for("get_recipe"))
+    return redirect(url_for("get_user_recipe"))
 
 
 # update to debug=False prior to deployment!
