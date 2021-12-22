@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col s12" id="reg-form">
-            <h3 class="center-align">{{ username }}'s Profile</h3>
+    {% with welcome_flash = get_flashed_messages(category_filter=["welcome_flash"]) %}
+        {% if welcome_flash %}
+            {%- for message in welcome_flash %}
+                <div>
+                    <h3>{{ message }}</h3>
+                </div>
+            {% endfor %}
+        {% else %}
+        <div class="row">
+            <div class="col s12" id="reg-form">
+                <h3 class="center-align">{{ username }}'s Profile</h3>
+            </div>
         </div>
-    </div>
+        {% endif %}
+    {% endwith %}
 </div>
 {% endblock %}

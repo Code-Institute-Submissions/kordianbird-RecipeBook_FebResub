@@ -2,7 +2,19 @@
 {% block content %}
 
 <div class="container">
-    <h2 class="center-align">Your Recipes</h2>
+    <section class="center-align">
+        {% with delete_flash = get_flashed_messages(category_filter=["delete_flash"]) %}
+            {% if delete_flash %}
+                {%- for message in delete_flash %}
+                    <div>
+                        <h3>{{ message }}</h3>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h2 class="center-align">Your Recipes</h2>
+            {% endif %}
+        {% endwith %}
+    </section>
     <div class="row">
         {% for recipe in recipes %}
         <div id="transition" class="col l4 m6 s12">

@@ -2,7 +2,19 @@
 {% block content %}
 
 <div class="container">
-    <h3>Edit recipe!</h3>
+    <section class="center-align">
+        {% with update_flash = get_flashed_messages(category_filter=["update_flash"]) %}
+            {% if update_flash %}
+                {%- for message in update_flash %}
+                    <div>
+                        <h3>{{ message }}</h3>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h3>Edit recipe!</h3>
+            {% endif %}
+        {% endwith %}
+    </section>
 <div class="row">
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <div class="row">

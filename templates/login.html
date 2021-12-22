@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container">
     <section class="center-align">
-        {% with register_flash = get_flashed_messages(category_filter=["register_flash"]) %}
-            {% if register_flash %}
-                {%- for message in register_flash %}
+        {% with logout_flash = get_flashed_messages(category_filter=["logout_flash"]) %}
+            {% if logout_flash %}
+                {%- for message in logout_flash %}
                     <div>
                         <h3>{{ message }}</h3>
                     </div>

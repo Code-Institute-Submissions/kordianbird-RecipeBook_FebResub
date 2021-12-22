@@ -108,7 +108,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    flash("you've been logged out")
+    flash("you've been logged out", "logout_flash")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -130,8 +130,8 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("recipe added!")
-        return redirect(url_for("home"))
+        flash("recipe added!", "add_flash")
+        return redirect(url_for("add_recipe"))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
@@ -151,7 +151,7 @@ def edit_recipe(recipe_id):
             "created_by": session["user"]
         }
         mongo.db.recipes.replace_one({"_id": ObjectId(recipe_id)}, submit)
-        flash("recipe updated!")
+        flash("Recipe Updated!", "update_flash")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -162,7 +162,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
-    flash("recipe deleted!")
+    flash("recipe deleted!", "delete_flash")
     return redirect(url_for("get_user_recipe"))
 
 
