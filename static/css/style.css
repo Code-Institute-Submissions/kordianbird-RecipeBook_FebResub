@@ -44,6 +44,14 @@ textarea {
   top: 0;
 }
 
+.recipe-height {
+  height: 100% !important;
+}
+
+.recipe-img {
+  height: 400px;
+}
+
 .container {
   background: white;
   padding: 20px 25px;

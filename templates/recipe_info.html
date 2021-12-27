@@ -2,22 +2,22 @@
 {% block content %}
 
 <div class="container" id="recipe-container">
-    <div class="row">
+  <div class="row">
       <!--column-->
       {% for recipe in recipes %}
        {% if recipe_id == recipe.id %}
-      <div id="transition" class="col l8 m6 s12">
+      <div id="transition" class="col l8 offset-l2 m12 s12">
         <!-- card-->
-        <div class="card large hoverable">
+        <div class="card large hoverable recipe-height">
             <div class="title-div"><span class="card-title">{{ recipe.recipe_name }}</span></div>
-          <div class="card-image">
-            <img width="305" alt="recipe image" height="229"
+          <div class="card-image recipe-img">
+            <img class="recipe-img" width="305" alt="recipe image"
               src="{{ recipe.recipe_img }}">
             <a href="{{ url_for('home') }}"  class="btn-floating halfway-fab waves-effect waves-light red">
               <i id="icon" class="large material-icons">remove</i>
             </a>
           </div>
-          <div class="card-content">
+          <div class="card-content" style="height: 500px;">
             <p>{{ recipe.recipe_method }}</p>
           </div>
           <div class="user-div">
@@ -37,7 +37,7 @@
       </div>
        {% endif %}
       {% endfor %}
-    </div>
   </div>
+</div>
 
 {% endblock %}
