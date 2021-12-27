@@ -120,7 +120,7 @@ def add_recipe():
         is_vegetarian = "yes" if request.form.get("is_vegetarian") else "no"
         recipe_img = request.form.get("recipe_img") if request.form.get(
          "recipe_img") else (
-          "http://veraconsulting.it/wp-content/uploads/2014/04/placeholder4.png"
+         "http://veraconsulting.it/wp-content/uploads/2014/04/placeholder4.png"
           )
         recipe = {
             "category_name": request.form.get("category_name"),

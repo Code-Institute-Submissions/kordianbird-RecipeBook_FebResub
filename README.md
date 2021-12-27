@@ -25,13 +25,15 @@ As a User...
 
 * I want to be able to delete my recipe
 
-* I want my password to be only available to me 
+* I want to be able to create an account
+
+* I want to be able to sign out of my account
 
 ## Design
 
 * the background image gives off a fun and inviting feel to the user
 
-* profile page let's the user know that they are logged in and what is their username
+* profile page let's the user know that they are logged in and what their username is
 
 * add recipe page is plain and not cramped with content to not overwhelm the user
 
@@ -115,21 +117,23 @@ As a User...
 
 I used :
 
-* [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my html code
+* [W3C Markup Validator](https://validator.w3.org/) to validate my html code
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my css code
 
 * [JSHint](https://jshint.com/) to validate my JavaScript code
 
+* [PEP8](http://pep8online.com/checkresult) to validate my Python code 
+
 results:
 
-* W3C Markup Validator: errors only related to Flask in my html code otherwise no errors in any of my html pages
+* W3C Markup Validator: No errors or warnings 
 
-* W3C CSS Validator: 0 errors
+* W3C CSS Validator: 1 error - this error is in materialize itself: `Value Error : letter-spacing only 0 can be a unit. You must put a unit after your number : 0.4`
 
-* JSHint: errors only related to JQuery as JSHint does not support it
+* JSHint: no errors or warnings
 
-* run.python file: errors: `continuation line with same indent as next logical line` and `over-indented`
+* PEP8: no errors or warnings
 
 [Tests](https://github.com/kordianbird/RecipeBook/blob/main/static/tests/recipe_tests.PNG)
 
