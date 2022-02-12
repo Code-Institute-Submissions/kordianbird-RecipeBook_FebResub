@@ -37,6 +37,12 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .container {
+    margin-top: 10%;
+  }
+}
+
 /* Classes */
 
 .navbar-fixed {
