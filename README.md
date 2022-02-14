@@ -15,7 +15,7 @@ My webiste aims to help people discover and improve their recipes for tastier me
 
 As a User...
 
-* I want to be able to find new recipes
+* I want to be able to search for new recipes
 
 * I want to create recipes for other users to see
 

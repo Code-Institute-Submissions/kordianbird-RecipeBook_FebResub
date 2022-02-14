@@ -35,15 +35,44 @@ textarea {
   .container {
     margin-top: 20%;
   }
+  #recipe-container {
+    margin-top: 0%;
+  }
+  .card-image {
+    height: 200px !important;
+  }
+  #expand-recipe-container {
+    margin-top: 15% !important;
+  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1001px) {
   .container {
     margin-top: 10%;
+  }
+  #recipe-container {
+    margin-top: 0%;
+  }
+}
+
+@media only screen and (min-width: 571px) and (max-width: 1000px) {
+  .container {
+    margin-top: 15%;
+  }
+  #recipe-container {
+    margin-top: 0%;
   }
 }
 
 /* Classes */
+
+.m-top-0 {
+  margin-top: 0;
+}
+
+.card-panel {
+  margin-top: 4rem;
+}
 
 .navbar-fixed {
   position: fixed;
@@ -140,6 +169,16 @@ textarea {
 }
 
 #recipe-container {
+  background: transparent;
+  padding: 20px 25px;
+  border:none;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 0%;
+}
+
+#expand-recipe-container {
   background: transparent;
   padding: 20px 25px;
   border:none;
