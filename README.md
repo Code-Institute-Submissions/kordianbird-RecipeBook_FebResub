@@ -19,6 +19,10 @@ As a User...
 
 * I want to create recipes for other users to see
 
+* I want this website to be responsive
+
+* I want to be able to view all my recipes
+
 * I want to be able to easily navigate through the website
 
 * I want to be able to edit my recipe
@@ -35,9 +39,9 @@ As a User...
 
 * profile page let's the user know that they are logged in and what their username is
 
-* add recipe page is plain and not cramped with content to not overwhelm the user
+* add_recipe page is plain and not cramped with content to not overwhelm the user
 
-* user's recipes have delete and edit buttons that are easy to see
+* user_recipes have delete and edit buttons that are easy to see
 
 * the pink and cyan colors of navbar and buttons are bright to give the website a calm and nice feel
 
@@ -49,7 +53,7 @@ As a User...
 
 * login/logout allows the user to enter/leave their profile
 
-* the user is able to create their own recipe in add recipe page
+* the user is able to create their own recipe in add_recipe page
 
 * the user can then edit/delete their previously published recipes
 
@@ -64,8 +68,6 @@ As a User...
 * function to change user's username or password
 
 * access to more food categories
-
-* a search bar to find specific recipes by name/user/category
 
 # Technologies Used
 
@@ -129,13 +131,13 @@ results:
 
 * W3C Markup Validator: No errors or warnings 
 
-* W3C CSS Validator: 1 error - this error is in materialize itself: `Value Error : letter-spacing only 0 can be a unit. You must put a unit after your number : 0.4`
+* W3C CSS Validator: No errors or warnings
 
-* JSHint: no errors or warnings
+* JSHint: No errors or warnings
 
-* PEP8: no errors or warnings
+* PEP8: No errors or warnings
 
-[Tests](https://github.com/kordianbird/RecipeBook/blob/main/static/tests/recipe_tests.PNG)
+[Tests](https://github.com/kordianbird/RecipeBook/blob/main/static/tests/tests.PNG)
 
 
 # Deployment
@@ -144,31 +146,37 @@ results:
 
 I deployed my app to Heroku using these steps...
 
-1. Type `pip3 freeze --local > requirements.txt`
+1. Log in to Heroku and create a new app. Choose the region that is most suitable to where you are in the world.
 
-2. Log in to Heroku
+2. You will need a Procfile in your repository if you do not have one already and add the following to it:
+```
+echo web: python app.py
+```
 
-3. Click on `Create new app`
+3. Make sure that your ```requirements.txt``` file is up to date using:
+```
+pip3 freeze --local requirements.txt
+```
 
-4. Give the app a name and choose region
+4. Connect your Github account to your Heroku App so that your repository from Github automatically deploys to Heroku when you push your changes to Github
 
-5. Click `Create app`
+5. Once Github is connected, you will need to go to settings and go to "Reveal Config Vars" where you will be able to set up the configuration variables that you have in your env.py file:
+``` python
+import os
 
-6. Click on `Connect to GitHub` in `Deployment method` section
+os.environ.["IP"] = 0.0.0.0
+os.environ.["PORT"] = "5000"
+os.environ["SECRET_KEY"] = "ENTER_YOUR_SECRET_KEY_HERE"
+os.environ["DEBUG"] = "TRUE"
+os.environ["MONGO_URI"] = "ENTER_YOUR_MONGO_URI_HERE"
+os.environ["MONGO_DBNAME"] = "ENTER_YOUR_DBNAME_HERE"
+```
 
-7. Enter name of your repository and click `search`
+6. Go back to the deploy tab and click on "Enable Automatic Deployement"
 
-8. Once you find the repository click on `Connect`
+7. Click "Deploy Branch" to start the build
 
-9. Click on `settings` tab and then click on `Reveal Config Vars`
-
-10. Enter your IP, PORT, SECRET_KEY, MONGO_URI and MONGO_DBNAME
-
-11. Type `git push` to push everything to GitHub
-
-12. In "Deploy" section on Heroku click on `Enable Automatic Deploys` at the bottom of the page
-
-13. Then click `Deploy Branch` and wait for your app to deploy
+8. Open your Heroku app
 
 ## Forking the GitHub Repository
 
